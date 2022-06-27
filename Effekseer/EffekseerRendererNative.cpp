@@ -10,6 +10,10 @@
 #include <EGL/egl.h>
 #endif
 
+#if defined(__EMSCRIPTEN__)
+#include <emscripten.h>
+#endif
+
 #if (_M_IX86_FP >= 2) || defined(__SSE__)
 #define EFK_SSE2
 #include <emmintrin.h>
