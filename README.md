@@ -1,5 +1,5 @@
 # EffekseerForCocos2d-x
-Effekseer runtime for Cocos2d-x v3
+Effekseer runtime for Cocos2d-x v3 compatible with editor 1.53e
 
 Install in cocos2d-x project:
 
