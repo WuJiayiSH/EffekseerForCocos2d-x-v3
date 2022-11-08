@@ -461,7 +461,7 @@ public:
 			SetTextureLoader(new TextureLoader(effectFile));
 			SetModelLoader(new ::EffekseerRendererGL::ModelLoader(effectFile));
 
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS || CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_EMSCRIPTEN)
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS || CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
 			SetMaterialLoader(new CachedMaterialLoader(new ::EffekseerRendererGL::MaterialLoader(EffekseerRendererGL::OpenGLDeviceType::OpenGLES2, nullptr, EffekseerDeviceObjectCollection::create(), effectFile)));
 #else
 			SetMaterialLoader(new CachedMaterialLoader(new ::EffekseerRendererGL::MaterialLoader(EffekseerRendererGL::OpenGLDeviceType::OpenGL2, nullptr, EffekseerDeviceObjectCollection::create(), effectFile)));
@@ -1010,7 +1010,7 @@ public:
 		spriteSize = 2400;
 #endif
 
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS || CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_EMSCRIPTEN)
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS || CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
 		renderer2d = ::EffekseerRendererGL::Renderer::Create(spriteSize, EffekseerRendererGL::OpenGLDeviceType::OpenGLES2, EffekseerDeviceObjectCollection::create());
 #else
 		renderer2d = ::EffekseerRendererGL::Renderer::Create(spriteSize, EffekseerRendererGL::OpenGLDeviceType::OpenGL2, EffekseerDeviceObjectCollection::create());
