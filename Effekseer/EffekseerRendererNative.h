@@ -1558,13 +1558,13 @@ struct StandardRendererState
 				CustomData2Count = MaterialPtr->CustomData2;
 
 				MaterialUniformCount = static_cast<int32_t>(Effekseer::Min(materialParam->MaterialUniforms.size(), MaterialUniforms.size()));
-				for (size_t i = 0; i < MaterialUniformCount; i++)
+				for (int32_t i = 0; i < MaterialUniformCount; i++)
 				{
 					MaterialUniforms[i] = materialParam->MaterialUniforms[i];
 				}
 
 				MaterialTextureCount = static_cast<int32_t>(Effekseer::Min(materialParam->MaterialTextures.size(), MaterialTextures.size()));
-				for (size_t i = 0; i < MaterialTextureCount; i++)
+				for (int32_t i = 0; i < MaterialTextureCount; i++)
 				{
 					if (materialParam->MaterialTextures[i].Type == 1)
 					{
@@ -7626,7 +7626,7 @@ public:
 			}
 
 			// invalid texture
-			for (size_t i = actualTextureCount; i < material->GetTextureCount(); i++)
+			for (int32_t i = actualTextureCount; i < material->GetTextureCount(); i++)
 			{
 				auto textureIndex = material->GetTextureIndex(i);
 				auto textureName = std::string(material->GetTextureName(i));
