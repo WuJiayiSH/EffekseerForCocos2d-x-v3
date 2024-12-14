@@ -22,6 +22,8 @@
 #include <mutex>
 #include <iostream>
 #include <array>
+#include <functional>
+#include <algorithm>
 #ifdef _WIN32
 #include <winsock2.h>
 #pragma comment( lib, "ws2_32.lib" )
